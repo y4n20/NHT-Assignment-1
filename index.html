@@ -11,65 +11,163 @@
 </head>
 <body>
 
-    <!-- ==================== SCREEN 1: ENTRY ==================== -->
-    <section id="screen-entry" class="screen active">
-        <div class="entry-content">
-            <h1 class="title">Our Corners</h1>
-            <p class="subtitle">A portrait of a family through the spaces they inhabit.</p>
+    <!-- ==================== TITLE ==================== -->
+    <section class="section title-section">
+        <h1 class="title">Our Corners</h1>
+        <p class="subtitle">A portrait of a family through the spaces they inhabit.</p>
+    </section>
 
-            <figure class="entry-photo">
-                <div class="photo-container has-placeholder" data-placeholder="Photo 1 — Family Together">
-                    <img src="images/photo-1.jpg"
-                         alt="An old family photograph showing all four family members together">
+    <!-- ==================== PHOTO 1 — FAMILY ARCHIVE ==================== -->
+    <section class="section photo-section">
+        <figure class="photo photo--wide">
+            <div class="photo-container has-placeholder" data-placeholder="Photo 1 — Family Together">
+                <img src="images/photo-1.jpg"
+                     alt="An old family photograph showing all four family members together">
+            </div>
+        </figure>
+    </section>
+
+    <!-- ==================== FLOOR PLAN (decorative) ==================== -->
+    <section class="section floorplan-section">
+        <p class="floorplan-title">One house, multiple corners</p>
+
+        <div class="floorplan">
+            <div class="room room--dad">
+                <div class="room-label">
+                    <span class="room-name">Dad</span>
+                    <span class="room-space">Balcony</span>
+                </div>
+            </div>
+            <div class="room room--mom">
+                <div class="room-label">
+                    <span class="room-name">Mom</span>
+                    <span class="room-space">Dining Area</span>
+                </div>
+            </div>
+            <div class="room room--sister">
+                <div class="room-label">
+                    <span class="room-name">Sister</span>
+                    <span class="room-space">Hallway</span>
+                </div>
+            </div>
+            <div class="room room--me">
+                <div class="room-label">
+                    <span class="room-name">Me</span>
+                    <span class="room-space">Bedroom</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MOM ==================== -->
+    <section class="section room-section">
+        <div class="room-content">
+            <h2 class="room-heading">Mom</h2>
+            <p class="room-heading-space">Dining Area</p>
+
+            <figure class="photo">
+                <div class="photo-container has-placeholder" data-placeholder="Photo 3 — Mother / Present">
+                    <img src="images/photo-3.jpg"
+                         alt="Mother at the dining area doing arts and crafts">
                 </div>
             </figure>
 
-            <button id="enter-home" class="text-btn">Enter Home</button>
+            <hr class="divider">
+
+            <figure class="photo">
+                <div class="photo-container has-placeholder" data-placeholder="Photo 4 — Mother's Space / Trace">
+                    <img src="images/photo-4.jpg"
+                         alt="The dining area without mother — her arts-and-crafts materials remain">
+                </div>
+            </figure>
+
+            <p class="caption">The dining table has become my mother's workspace for arts and crafts. Even when she isn't there, the things she leaves behind make the space recognisably hers.</p>
         </div>
     </section>
 
-    <!-- ==================== SCREEN 2: FLOOR PLAN ==================== -->
-    <section id="screen-floorplan" class="screen">
-        <div class="floorplan-wrapper">
-            <p class="floorplan-title">Our Corners</p>
+    <!-- ==================== DAD ==================== -->
+    <section class="section room-section">
+        <div class="room-content">
+            <h2 class="room-heading">Dad</h2>
+            <p class="room-heading-space">Balcony</p>
 
-            <div class="floorplan">
-                <div class="room room--dad" data-room="dad">
-                    <div class="room-label">
-                        <span class="room-name">Dad</span>
-                        <span class="room-space">Balcony</span>
-                    </div>
+            <figure class="photo">
+                <div class="photo-container has-placeholder" data-placeholder="Photo 5 — Father / Present">
+                    <img src="images/photo-5.jpg"
+                         alt="Father cleaning and maintaining his aquarium at the balcony area">
                 </div>
-                <div class="room room--mom" data-room="mom">
-                    <div class="room-label">
-                        <span class="room-name">Mom</span>
-                        <span class="room-space">Dining Area</span>
-                    </div>
-                </div>
-                <div class="room room--sister" data-room="sister">
-                    <div class="room-label">
-                        <span class="room-name">Sister</span>
-                        <span class="room-space">Hallway</span>
-                    </div>
-                </div>
-                <div class="room room--me" data-room="me">
-                    <div class="room-label">
-                        <span class="room-name">Me</span>
-                        <span class="room-space">Bedroom</span>
-                    </div>
-                </div>
-            </div>
+            </figure>
 
-            <p class="floorplan-hint">Select a room to explore</p>
+            <hr class="divider">
+
+            <figure class="photo">
+                <div class="photo-container has-placeholder" data-placeholder="Photo 6 — Father's Space / Trace">
+                    <img src="images/photo-6.jpg"
+                         alt="The balcony area without father — aquariums, tools and equipment remain">
+                </div>
+            </figure>
+
+            <p class="caption">My father's corner is shaped by his aquariums, tools and the routine of maintaining them.</p>
         </div>
     </section>
 
-    <!-- ==================== SCREEN 3: ROOM VIEW ==================== -->
-    <section id="screen-room" class="screen">
-        <button id="back-btn" class="text-btn back-btn">&larr; Back to House</button>
-        <div id="room-content" class="room-content">
-            <!-- Populated dynamically by JS -->
+    <!-- ==================== ME ==================== -->
+    <section class="section room-section">
+        <div class="room-content">
+            <h2 class="room-heading">Me</h2>
+            <p class="room-heading-space">Bedroom</p>
+
+            <figure class="photo">
+                <div class="photo-container has-placeholder" data-placeholder="Photo 7 — Me / Present">
+                    <img src="images/photo-7.jpg"
+                         alt="Me at my aquarium feeding the fish">
+                </div>
+            </figure>
+
+            <hr class="divider">
+
+            <figure class="photo">
+                <div class="photo-container has-placeholder" data-placeholder="Photo 8 — My Space / Trace">
+                    <img src="images/photo-8.jpg"
+                         alt="My bedroom without me — aquarium, desk and personal objects remain">
+                </div>
+            </figure>
+
+            <p class="caption">My room is both a personal space and a place shaped by my relationship with the aquarium.</p>
         </div>
+    </section>
+
+    <!-- ==================== SISTER ==================== -->
+    <section class="section room-section">
+        <div class="room-content">
+            <h2 class="room-heading">Sister</h2>
+            <p class="room-heading-space">Hallway</p>
+
+            <p class="temporal-label">then</p>
+            <figure class="photo">
+                <div class="photo-container has-placeholder" data-placeholder="Photo 2 — Sister / Past">
+                    <img src="images/photo-2.jpg"
+                         alt="Sister standing in the hallway of the family home — an older photograph">
+                </div>
+            </figure>
+
+            <hr class="divider">
+
+            <p class="temporal-label">now</p>
+            <figure class="photo">
+                <div class="photo-container has-placeholder" data-placeholder="Photo 9 — Sister's Aquarium / Present">
+                    <img src="images/photo-9.jpg"
+                         alt="Sister's aquarium alone in the same hallway — present day">
+                </div>
+            </figure>
+
+            <p class="caption">She no longer lives here. The space remains.</p>
+        </div>
+    </section>
+
+    <!-- ==================== CLOSING ==================== -->
+    <section class="section closing-section">
+        <p class="closing-text">Our Corners</p>
     </section>
 
     <script src="js/main.js"></script>
