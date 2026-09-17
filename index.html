@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Corners</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Corners</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Our Corners</h1>
 
-  <script src="js/main.js"></script>
+    <!-- ==================== SCREEN 1: ENTRY ==================== -->
+    <section id="screen-entry" class="screen active">
+        <div class="entry-content">
+            <h1 class="title">Our Corners</h1>
+            <p class="subtitle">A portrait of a family through the spaces they inhabit.</p>
+
+            <figure class="entry-photo">
+                <div class="photo-container has-placeholder" data-placeholder="Photo 1 — Family Together">
+                    <img src="images/photo-1.jpg"
+                         alt="An old family photograph showing all four family members together">
+                </div>
+            </figure>
+
+            <button id="enter-home" class="text-btn">Enter Home</button>
+        </div>
+    </section>
+
+    <!-- ==================== SCREEN 2: FLOOR PLAN ==================== -->
+    <section id="screen-floorplan" class="screen">
+        <div class="floorplan-wrapper">
+            <p class="floorplan-title">Our Corners</p>
+
+            <div class="floorplan">
+                <div class="room room--dad" data-room="dad">
+                    <div class="room-label">
+                        <span class="room-name">Dad</span>
+                        <span class="room-space">Balcony</span>
+                    </div>
+                </div>
+                <div class="room room--mom" data-room="mom">
+                    <div class="room-label">
+                        <span class="room-name">Mom</span>
+                        <span class="room-space">Dining Area</span>
+                    </div>
+                </div>
+                <div class="room room--sister" data-room="sister">
+                    <div class="room-label">
+                        <span class="room-name">Sister</span>
+                        <span class="room-space">Hallway</span>
+                    </div>
+                </div>
+                <div class="room room--me" data-room="me">
+                    <div class="room-label">
+                        <span class="room-name">Me</span>
+                        <span class="room-space">Bedroom</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="floorplan-hint">Select a room to explore</p>
+        </div>
+    </section>
+
+    <!-- ==================== SCREEN 3: ROOM VIEW ==================== -->
+    <section id="screen-room" class="screen">
+        <button id="back-btn" class="text-btn back-btn">&larr; Back to House</button>
+        <div id="room-content" class="room-content">
+            <!-- Populated dynamically by JS -->
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
