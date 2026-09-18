@@ -316,3 +316,98 @@ img {
         min-height: 380px;
     }
 }
+
+
+/* ============================
+   FLOOR PLAN INDICATOR
+   (fixed, scroll-linked)
+   ============================ */
+.floorplan-indicator {
+    position: fixed;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    width: 160px;
+    max-width: 160px;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.fp-grid {
+    display: grid;
+    grid-template-columns: 1fr 14px 1fr;
+    grid-template-rows: auto 14px auto;
+    align-items: center;
+}
+
+.fp-box {
+    grid-row: 1;
+    border: 1px solid var(--border);
+    color: #999999;
+    font-family: var(--font-main);
+    font-size: 0.65rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.3;
+    padding: 0.5rem 0.35rem;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.fp-dining {
+    grid-column: 1;
+}
+
+.fp-balcony {
+    grid-column: 3;
+}
+
+.fp-room {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.fp-line {
+    background: var(--border);
+    transition: background-color 0.3s ease;
+}
+
+.fp-line-h {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    height: 1px;
+}
+
+.fp-line-v {
+    grid-column: 1;
+    grid-row: 2;
+    width: 1px;
+    height: 100%;
+    justify-self: center;
+}
+
+/* Highlight states — driven by data-highlight on the container */
+.floorplan-indicator[data-highlight="dining"] .fp-dining {
+    border-color: #000000;
+    color: #000000;
+}
+
+.floorplan-indicator[data-highlight="balcony"] .fp-balcony {
+    border-color: #000000;
+    color: #000000;
+}
+
+.floorplan-indicator[data-highlight="room"] .fp-room {
+    border-color: #000000;
+    color: #000000;
+}
+
+.floorplan-indicator[data-highlight="hallway"] .fp-line-v {
+    background: #000000;
+}
+
+@media (max-width: 768px) {
+    .floorplan-indicator {
+        display: none;
+    }
+}

@@ -8,8 +8,19 @@
 </head>
 <body>
 
+    <!-- ==================== FLOOR PLAN INDICATOR (fixed, decorative) ==================== -->
+    <nav class="floorplan-indicator" aria-hidden="true">
+        <div class="fp-grid">
+            <div class="fp-box fp-dining">Dining Area</div>
+            <div class="fp-line fp-line-h"></div>
+            <div class="fp-box fp-balcony">Balcony</div>
+            <div class="fp-line fp-line-v"></div>
+            <div class="fp-box fp-room">My Room</div>
+        </div>
+    </nav>
+
     <!-- ==================== 1. TITLE ==================== -->
-    <section class="section hero">
+    <section class="section hero" data-section="title">
         <div class="wrap hero-inner">
             <h1 class="title">Our Corners</h1>
             <p class="lede">My family shares the same roof, but we do not necessarily share the same spaces within it. Over time, each of us has developed our own routines, interests and personal spaces within the home. Our Corners explores family through these individual spaces, looking at how presence, absence and belongings can reveal the changing structure of a family.</p>
@@ -17,7 +28,7 @@
     </section>
 
     <!-- ==================== 2. PHOTO 1 + TEXT ==================== -->
-    <section class="section split">
+    <section class="section split" data-section="photo-1">
         <div class="wrap split-grid">
             <figure class="photo split-photo">
                 <div class="photo-container has-placeholder" data-placeholder="Photo 1 — Family Together">
@@ -32,7 +43,7 @@
     </section>
 
     <!-- ==================== 3. TEXT + PHOTO 2 (flipped) ==================== -->
-    <section class="section split split--flip">
+    <section class="section split split--flip" data-section="photo-2">
         <div class="wrap split-grid">
             <figure class="photo split-photo">
                 <div class="photo-container has-placeholder" data-placeholder="Photo 2 — Sister / Past">
@@ -47,7 +58,7 @@
     </section>
 
     <!-- ==================== 4. MOM: PHOTO 3 + TEXT + PHOTO 4 ==================== -->
-    <section class="section stack">
+    <section class="section stack" data-section="photo-3">
         <div class="wrap">
             <figure class="photo">
                 <div class="photo-container has-placeholder" data-placeholder="Photo 3 — Mom / Present">
@@ -68,7 +79,7 @@
     </section>
 
     <!-- ==================== 5. DAD: PHOTO 5 + (PHOTO 6 + TEXT) ==================== -->
-    <section class="section stack-split">
+    <section class="section stack-split" data-section="photo-5">
         <div class="wrap">
             <figure class="photo">
                 <div class="photo-container has-placeholder" data-placeholder="Photo 5 — Dad / Present">
@@ -92,7 +103,7 @@
     </section>
 
     <!-- ==================== 6. ME: PHOTO 7 + TEXT + PHOTO 8 ==================== -->
-    <section class="section stack">
+    <section class="section stack" data-section="photo-7">
         <div class="wrap">
             <figure class="photo">
                 <div class="photo-container has-placeholder" data-placeholder="Photo 7 — Me / Present">
@@ -113,7 +124,7 @@
     </section>
 
     <!-- ==================== 7. SISTER: PHOTO 9 + TEXT ==================== -->
-    <section class="section split">
+    <section class="section split" data-section="photo-9">
         <div class="wrap split-grid">
             <figure class="photo split-photo">
                 <div class="photo-container has-placeholder" data-placeholder="Photo 9 — Sister's Aquarium / Present">
