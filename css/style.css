@@ -325,7 +325,7 @@ img {
 .floorplan-indicator {
     position: fixed;
     top: 50%;
-    right: 2rem;
+    right: 4rem;
     transform: translateY(-50%);
     width: 160px;
     max-width: 160px;
