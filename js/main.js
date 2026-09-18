@@ -15,9 +15,14 @@ function initImage(img) {
         img.style.display = 'none';
     });
 
-    // Already failed (cached miss)
-    if (img.complete && img.naturalWidth === 0) {
-        img.style.display = 'none';
+    // Image was already loaded (e.g. from cache) before this ran, so the
+    // 'load' event above already fired and won't fire again.
+    if (img.complete) {
+        if (img.naturalWidth === 0) {
+            img.style.display = 'none';
+        } else {
+            img.parentElement.classList.remove('has-placeholder');
+        }
     }
 }
 
